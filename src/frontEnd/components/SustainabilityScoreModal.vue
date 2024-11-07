@@ -4,43 +4,29 @@
       v-bind:visible="visible"
       modal
       :header="getHeader"
-      :style="{ width: '25rem' }"
+      :style="{ width: '40rem', height: '25rem' }"
+      dismisableMask="true"
     >
       
       <div v-if="scores">
-        <!-- <p>Environmental: {{ scores.environmental }}</p>
-        <p>Social: {{ scores.social }}</p>
-        <p>Governance: {{ scores.governance }}</p> -->
-        <ChartData :sustainabilityScores="scores" />
+        <ChartData :sustainabilityScores="scores" :company="getCompany"/>
       </div>
-      <div class="flex justify-end gap-2">
+      <div class=" gap-2">
         <Button
           type="button"
           label="Cancel"
           severity="secondary"
-          @click="visible = false"
-        ></Button>
+          @click="$emit('close')"></Button>
       </div>
     </Dialog>
   </div>
 </template>
 
-<!-- <div class="modal">
-        <h2>{{ company }} - Sustainability Scores</h2>
-        <div v-if="scores">
-            <p>Environmental: {{ scores.environmental }}</p>
-            <p>Social: {{ scores.social }}</p>
-            <p>Governance: {{ scores.governance }}</p>
-        </div>
-        <button @click="$emit('close')">Close</button>
-    </div> -->
-<!-- </template> -->
-
 <script>
 import axios from "axios";
 import Dialog from "primevue/dialog";
 import Button from "primevue/button";
-import ChartData from "./chartData.vue";
+import ChartData from "./ChartData.vue";
 
 export default {
   components: {
@@ -51,19 +37,21 @@ export default {
   props: ["company", "visible"],
   data() {
     return {
-      scores: null,
+      scores: null
     };
   },
   computed: {
     getHeader() {
       return `${this.company.data.company} Sustainability Scores`;
     },
+    getCompany(){
+      return this.company.data.company
+    }
   },
   async created() {
     const response = await axios.get(
       `http://localhost:3000/investments?company=${this.company.data.company}`
     );
-    console.log(response.data);
     this.scores = response.data[0].sustainabilityScore;
   },
 };

@@ -6,38 +6,27 @@
 
 <script>
 import { ref } from "vue";
-
 import Chart from "primevue/chart";
 
 export default {
-  props: ["sustainabilityScores"],
+  props: ["sustainabilityScores", "company"],
   components: { Chart },
-  setup() {
-    // Chart data formatted for PrimeVue's Chart component
+
+  setup(props) {
     const chartData = ref({
-      labels: this.sustainabilityScores.map((item) => item.company),
-      datasets: [
-        {
-          label: "Sustainability Score",
-          backgroundColor: "#42A5F5",
-          data: this.sustainabilityScores.map((item) => item.sustainabilityScore),
-        },
-        {
-          label: "Environmental Score",
-          backgroundColor: "#66BB6A",
-          data: this.sustainabilityScores.map((item) => item.environmentalScore),
-        },
-        {
-          label: "Social Score",
-          backgroundColor: "#FFA726",
-          data: this.sustainabilityScores.map((item) => item.socialScore),
-        },
-        {
-          label: "Governance Score",
-          backgroundColor: "#FFCA28",
-          data: this.sustainabilityScores.map((item) => item.governanceScore),
-        },
-      ],
+          labels: ["Sustainability", "Environmental", "Social", "Governance"],
+          datasets: [
+            {
+              label: "Sustainability Score",
+              backgroundColor:[ "#42A5F5", "#66BB6A", "#FFA726", "#FFCA28"],
+              data: [
+                props.sustainabilityScores.sustainabilityScore,
+                props.sustainabilityScores.environmentalScore,
+                props.sustainabilityScores.socialScore,
+                props.sustainabilityScores.governanceScore,
+              ],
+            }
+          ]
     });
 
     // Chart options
@@ -69,7 +58,6 @@ export default {
 </script>
 
 <style>
-/* Optional: Style adjustments for the chart container */
 .chart-container {
   width: 100%;
   max-width: 800px;

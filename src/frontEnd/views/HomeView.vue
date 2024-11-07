@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import InvestmentList from '../components/InvestmentList.vue'
+import Investment from '../components/Investment.vue'
 </script>
 
 <template>
   <main>
-    <InvestmentList />
+    <Investment />
   </main>
 </template>

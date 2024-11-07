@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
-    "server": "json-server --watch ./src/server/index.ts — port 8000"
+    "server": "json-server --watch ./src/server/data/db.json — port 3000"
   },
   "dependencies": {
     "@primevue/themes": "^4.2.1",

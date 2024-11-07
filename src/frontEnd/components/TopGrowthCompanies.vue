@@ -1,30 +1,22 @@
-
 <template>
-    <div>
-        <h2>Top 3 Growth Companies</h2>
-        <table>
-            <tr>
-                <th>Company</th>
-                <th>Growth</th>
-            </tr>
-            <tr v-for="company in topGrowthCompanies" :key="company.symbol">
-                <td>{{ company.company }}</td>
-                <td>{{ company.growth }}%</td>
-            </tr>
-        </table>
-    </div>
+  <div>
+    <Card>
+      <template #title>Top 3 Growth Companies</template>
+      <template #content>
+        <InvestmentTable :investments="investments" />
+      </template>
+    </Card>
+  </div>
 </template>
 <script>
+import Card from "primevue/card";
+import InvestmentTable from "./InvestmentTable.vue";
+
 export default {
-    props: ['investments'],
-    computed: {
-        topGrowthCompanies() {
-            return this.investments
-                .filter(company => company.growth > 21)
-                .sort((a, b) => b.growth - a.growth)
-                .slice(0, 3);
-        }
-    }
+  props: ["investments"],
+  components: {
+    InvestmentTable,
+    Card,
+  },
 };
 </script>
-        
