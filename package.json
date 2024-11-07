@@ -1,0 +1,36 @@
+{
+  "name": "sustainableinvestingtracker",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build --force",
+    "server": "json-server --watch ./src/server/index.ts — port 8000"
+  },
+  "dependencies": {
+    "@primevue/themes": "^4.2.1",
+    "axios": "^1.7.7",
+    "chart.js": "^4.4.6",
+    "jest": "^29.7.0",
+    "json-server": "^1.0.0-beta.3",
+    "msw": "^2.6.0",
+    "pinia": "^2.2.4",
+    "primevue": "^4.2.1",
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^20.17.6",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/tsconfig": "^0.5.1",
+    "npm-run-all2": "^7.0.1",
+    "typescript": "~5.6.0",
+    "vite": "^5.4.10",
+    "vue-tsc": "^2.1.6"
+  }
+}

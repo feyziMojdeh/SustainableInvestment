@@ -1,0 +1,109 @@
+{
+  "investments": [
+    {
+      "id": 1,
+      "company": "Tesla",
+      "symbol": "TSLA",
+      "shares": 10,
+      "sector": "Electric Vehicles",
+      "country": "USA",
+      "growth": 25,
+      "sustainabilityScore": {
+        "sustainabilityScore": 85,
+        "environmentalScore": 90,
+        "socialScore": 80,
+        "governanceScore": 75
+      }
+    },
+    {
+      "id": 2,
+      "company": "NextEra Energy",
+      "symbol": "NEE",
+      "shares": 15,
+      "sector": "Renewable Energy",
+      "country": "USA",
+      "growth": 15,
+      "sustainabilityScore": {
+        "sustainabilityScore": 92,
+        "environmentalScore": 95,
+        "socialScore": 88,
+        "governanceScore": 85
+      }
+    },
+    {
+      "id": 3,
+      "company": "First Solar",
+      "symbol": "FSLR",
+      "shares": 25,
+      "sector": "Solar Energy",
+      "country": "USA",
+      "growth": 22,
+      "sustainabilityScore": {
+        "sustainabilityScore": 88,
+        "environmentalScore": 92,
+        "socialScore": 84,
+        "governanceScore": 78
+      }
+    },
+    {
+      "id": 4,
+      "company": "Fugro",
+      "symbol": "FUR.AS",
+      "shares": 20,
+      "sector": "Geotechnical Services",
+      "country": "Netherlands",
+      "growth": 18,
+      "sustainabilityScore": {
+        "sustainabilityScore": 78,
+        "environmentalScore": 80,
+        "socialScore": 75,
+        "governanceScore": 70
+      }
+    },
+    {
+      "id": 5,
+      "company": "DSM",
+      "symbol": "DSM.AS",
+      "shares": 25,
+      "sector": "Nutrition and Materials",
+      "country": "Netherlands",
+      "growth": 27,
+      "sustainabilityScore": {
+        "sustainabilityScore": 90,
+      "environmentalScore": 92,
+      "socialScore": 89,
+      "governanceScore": 91
+      }
+    },
+    {
+      "id": 6,
+      "company": "Philips",
+      "symbol": "PHG",
+      "shares": 30,
+      "sector": "Health Technology",
+      "country": "Netherlands",
+      "growth": 19,
+      "sustainabilityScore": {
+        "sustainabilityScore": 86,
+      "environmentalScore": 88,
+      "socialScore": 84,
+      "governanceScore": 85
+      }
+    },
+    {
+      "id": 7,
+      "company": "Shell",
+      "symbol": "RDS.A",
+      "shares": 50,
+      "sector": "Energy",
+      "country": "Netherlands",
+      "growth": 23,
+      "sustainabilityScore": {
+        "sustainabilityScore": 77,
+        "environmentalScore": 80,
+        "socialScore": 70,
+        "governanceScore": 75
+      }
+    }
+  ]
+}
