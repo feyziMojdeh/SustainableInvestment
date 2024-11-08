@@ -1,11 +1,12 @@
 <template>
   <div class="card flex justify-center">
     <Dialog
-      v-bind:visible="visible"
-      modal
+      v-bind:visible ="showDialog"
+      :modal="true"
       :header="getHeader"
       :style="{ width: '40rem', height: '25rem' }"
       dismisableMask="true"
+      @update:visible = "hideHandler"
     >
       
       <div v-if="scores">
@@ -37,7 +38,8 @@ export default {
   props: ["company", "visible"],
   data() {
     return {
-      scores: null
+      scores: null,
+      showDialog: this.visible
     };
   },
   computed: {
@@ -46,7 +48,17 @@ export default {
     },
     getCompany(){
       return this.company.data.company
-    }
+    },
+    getVisible() {
+      return this.visible;
+    },
+  },
+  methods: {
+    hideHandler(value) {
+      if(!value){
+        this.$emit('close')
+      }
+    },
   },
   async created() {
     const response = await axios.get(

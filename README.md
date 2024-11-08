@@ -11,6 +11,10 @@ I started with a proof of concept to make sure that I can have a working app:
 
 Then, I tried to connect more pieces together.
 
+* Setting up the data table for showing the data in a tabular format
+* Setting up the filter for the data table
+* Setting up the unit tests for the components
+
 ## Challenges
 * I had the following major challenges in the given assignment (mostly since it was my first using primevue/mock server and Vitest):
     * Learning how to work with PrimeVue and PrimeVue chart.
@@ -24,6 +28,8 @@ Then, I tried to connect more pieces together.
 According to the assignment criteria, I assumed it is intended to load the entire graph in one go and not eagerly load the leaves.
 
 ## ToDo
+* Setting up Repository and Service layer for calling the API
+* Setting up BFF layer for fetching data
 * More generic components for bar chart and data table
 * Setting up the server for using multiple files
 * More test for cover all Scenarios
