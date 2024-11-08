@@ -1,4 +1,4 @@
-import { mount, shallowMount } from "@vue/test-utils";
+import { shallowMount } from "@vue/test-utils";
 import { describe, it, expect, vi } from "vitest";
 import InvestmentTable from "@/frontEnd/components/InvestmentTable.vue";
 import SustainabilityScoreModal from "@/frontEnd/components/SustainabilityScoreModal.vue";
