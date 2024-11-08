@@ -12,9 +12,10 @@ I started with a proof of concept to make sure that I can have a working app:
 Then, I tried to connect more pieces together.
 
 ## Challenges
-* I had the following major challenges in the given assignment (mostly since it was my first using primevue/mock server):
+* I had the following major challenges in the given assignment (mostly since it was my first using primevue/mock server and Vitest):
     * Learning how to work with PrimeVue and PrimeVue chart.
     * Challengeing on applying filter on PrimeVue Data table
+    * Learning how to work with Vitest
     * Learning how to work with Json server and MSW
     * Coming up with a proper solution for working with multiple json file in json server
 
@@ -25,6 +26,7 @@ According to the assignment criteria, I assumed it is intended to load the entir
 ## ToDo
 * More generic components for bar chart and data table
 * Setting up the server for using multiple files
+* More test for cover all Scenarios
 
 # How To Run
 

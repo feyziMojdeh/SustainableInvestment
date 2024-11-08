@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Investment > match snapshot 1`] = `
+"<div class="card">
+  <tabs-stub value="0"></tabs-stub>
+</div>"
+`;

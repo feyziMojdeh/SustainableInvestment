@@ -5,7 +5,12 @@
     "vitest.config.*",
     "cypress.config.*",
     "nightwatch.conf.*",
-    "playwright.config.*"
+    "playwright.config.*",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts"
   ],
   "compilerOptions": {
     "composite": true,
@@ -17,5 +22,6 @@
     "types": ["node"],
     "resolveJsonModule": true,
     "typeRoots": ["./node_modules/@types", "./types"]
-  }
+  },
+  "exclude": ["node_modules"]
 }

@@ -6,10 +6,10 @@
         <Tab value="1">Top Growth Companies</Tab>
       </TabList>
       <TabPanels>
-        <TabPanel value="0">
+        <TabPanel value="0" class="investment-portfolio">
           <InvestmentPortfolio :investments="investments"/>
         </TabPanel>
-        <TabPanel value="1">
+        <TabPanel value="1" class="top-growth-companies">
           <TopGrowthCompanies :investments="filteredInvestments" />
         </TabPanel>
       </TabPanels>
